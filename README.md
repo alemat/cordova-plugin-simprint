@@ -1,4 +1,4 @@
-Cordova Plugin Simprint
+Cordova Plugin Simprints
 ======
 
-Cordova plugin for simprint
+Cordova plugin for simprints
