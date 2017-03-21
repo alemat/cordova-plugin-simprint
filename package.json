@@ -1,0 +1,12 @@
+{
+  "name": "cordova-plugin-simprint",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-simprint",
+    "platforms": [
+      "android",
+      "ios",
+    ]
+  },
+  "description": "A Cordova Plugin for SimPrint"
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-simprint"
+    version="1.0.0">
+    <name>Simprint</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/alemat/cordova-plugin-simprint.git</repo>
+    <issue>https://github.com/alemat/cordova-plugin-simprint/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.CordovaPluginSimprint -->
+        <clobbers target="CordovaPluginSimprint" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="CordovaPluginSimprint">
+          <param name="android-package" value="com.example.CordovaPluginSimprint" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/example/CordovaPluginSimprint.java" target-dir="src/com/example/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="CordovaPluginSimprint" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaPluginSimprint">
+                <param name="ios-package" value="CordovaPluginSimprint" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CordovaPluginSimprint.h" />
+        <source-file src="src/ios/CordovaPluginSimprint.m" />
+    </platform>
+</plugin>
