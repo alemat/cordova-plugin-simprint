@@ -1,19 +1,23 @@
+// native iOS Objective-C code goes here
+// note that the below code is sample
 
 
-//  This is (Simprint.js) what gets called first and then kicks off Cordova to call our native code. */ 
+#import "Simprint.h"
 
+#import <Cordova/CDVAvailability.h>
 
-/*var exec = require('cordova/exec');
+@implementation Simprint
 
-var PLUGIN_NAME = 'Simprint';
+- (void)pluginInitialize {
+}
 
-var Simprint = {
-  echo: function(phrase, cb) {
-    exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
-  }
+- (void)echo:(CDVInvokedUrlCommand *)command {
+  NSString* phrase = [command.arguments objectAtIndex:0];
+  NSLog(@"%@", phrase);
+}
 
- 
+- (void)getFingerprint:(CDVInvokedUrlCommand *)command {
   
-};
+}
 
-module.exports = Simprint; */
+@end
