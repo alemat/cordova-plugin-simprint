@@ -1,28 +1,19 @@
-#import "CordovaPluginSimprint.h"
 
-#import <Cordova/CDVAvailability.h>
 
-@implementation Simprint
+//  This is (Simprint.js) what gets called first and then kicks off Cordova to call our native code. */ 
 
-- (void)pluginInitialize {
-}
 
-- (void)echo:(CDVInvokedUrlCommand *)command {
-  NSString* phrase = [command.arguments objectAtIndex:0];
-  NSLog(@"%@", phrase);
-}
+/*var exec = require('cordova/exec');
 
-- (void)getDate:(CDVInvokedUrlCommand *)command {
-  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-  NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
-  [dateFormatter setLocale:enUSPOSIXLocale];
-  [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+var PLUGIN_NAME = 'Simprint';
 
-  NSDate *now = [NSDate date];
-  NSString *iso8601String = [dateFormatter stringFromDate:now];
+var Simprint = {
+  echo: function(phrase, cb) {
+    exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
+  }
 
-  CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:iso8601String];
-  [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
-}
+ 
+  
+};
 
-@end
+module.exports = Simprint; */
