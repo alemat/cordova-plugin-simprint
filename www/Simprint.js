@@ -1,15 +1,19 @@
 
-var exec = require('cordova/exec');
+
+//  This is (Simprint.js) what gets called first and then kicks off Cordova to call our native code. */ 
+
+
+/*var exec = require('cordova/exec');
 
 var PLUGIN_NAME = 'Simprint';
 
-var CordovaPluginSimprint = {
+var Simprint = {
   echo: function(phrase, cb) {
     exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
-  },
-  getDate: function(cb) {
-    exec(cb, null, PLUGIN_NAME, 'getDate', []);
   }
+
+ 
+  
 };
 
-module.exports = CordovaPluginSimprint;
+module.exports = Simprint; */
